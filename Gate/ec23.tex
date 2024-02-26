@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -27,6 +27,7 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage{textcomp}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -45,17 +46,16 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{11.9...}
+\title{ec23...}
 \author{EE23BTECH11029 - Kanishk}
 \maketitle
-\newpage
 
 \bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question}:\\ 
-In the table shown below, match the signal type with its spectral characteristics.
+In the table shown below, match the signal type with its spectral characteristics.\hfill{GATE 2023 EC}
 
 \vspace{2mm}
 
@@ -63,10 +63,135 @@ In the table shown below, match the signal type with its spectral characteristic
     \centering
     \def\arraystretch{2.5}
     \input{tables/table.tex}
+    \caption{ }
+    \label{29.2023}
 \end{table}
+
+\begin{enumerate}
+\item \brak{\romannumeral 1} \textrightarrow \brak{a}  ,   \brak{\romannumeral 2} \textrightarrow \brak{b}   ,   \brak{\romannumeral 3} \textrightarrow \brak{c}   ,   \brak{\romannumeral 4} \textrightarrow \brak{d}
+
+\item \brak{\romannumeral 1} \textrightarrow \brak{a}   ,  \brak{\romannumeral 2} \textrightarrow \brak{c}   ,   \brak{\romannumeral 3} \textrightarrow \brak{b}   ,   \brak{\romannumeral 4} \textrightarrow \brak{d}
+
+\item  \brak{\romannumeral 1} \textrightarrow \brak{d}   ,   \brak{\romannumeral 2} \textrightarrow \brak{b}   ,   \brak{\romannumeral 3} \textrightarrow \brak{c}   ,   \brak{\romannumeral 4} \textrightarrow \brak{a}
+
+\item \brak{\romannumeral 1} \textrightarrow \brak{a}   ,  \brak{\romannumeral 2} \textrightarrow \brak{c}    ,   \brak{\romannumeral 3} \textrightarrow \brak{d}   ,  \brak{\romannumeral 4} \textrightarrow \brak{b}
+
+\end{enumerate}
 
 \textbf{Solution}:\\
 
 
+\begin{table}[ht]
+    \centering
+    \def\arraystretch{2.5}
+    \input{tables/table1.tex}
+    \caption{Input Parameters}
+    \label{1}
+\end{table}
+
+
+\textbf{1. Continuous, aperiodic signal}\\
+
+
+Let a aperiodic and continuous function be $x\brak{t}$
+\begin{align}
+X\brak{f}&=\int_{-\infty}^{\infty} x\brak{t}.e^{-j2\pi ft}\,dt
+\end{align}
+
+Let's consider the limit as $f$ approaches a certain frequency $f_0$:
+
+\begin{align}
+lim_{\epsilon \rightarrow 0}X\brak{f_0+\epsilon}&= lim_{\epsilon \rightarrow 0}\int_{-\infty}^{\infty} x\brak{t}.e^{-j2\pi ft}\,dt
+\end{align}
+
+By continuity of $x\brak{t}$ we can interchange the limit and the integral:
+\begin{align}
+&=\int_{-\infty}^{\infty} x\brak{t}.lim_{\epsilon\rightarrow0}e^{-j2\pi\brak{f_0+\epsilon}t}\,dt\\
+&=\int_{-\infty}^{\infty} x\brak{t}.e^{-j2\pi f_0 t}\,dt\\
+&=X\brak{f_0}\\
+ lim_{f_0-\epsilon}&=X\brak{f_0}
+\end{align}
+
+Therefore, X\brak{f} is continuous for all frequencies $f$.
+
+Let's assume $X\brak{f}$ is periodic with period $T$ 
+
+\begin{align}
+X\brak{f+T}&=X\brak{f}
+\end{align}
+Now applying inverse Fourier transform
+
+\begin{align}
+x\brak{t}&=\int_{-\infty}^{\infty} X\brak{f}.e^{j2\pi ft}\,df\\
+&=\int_{-\infty}^{\infty} X\brak{f+T}.e^{j2\pi \brak{f+T}t}\,df\\
+&=\int_{-\infty}^{\infty} X\brak{f}.e^{j2\pi \brak{f+T}t}\,df\\
+&=e^{j2\pi Tt}\int_{-\infty}^{\infty}.X\brak{f}.e^{2\pi ft}\, df
+\end{align}
+
+$e^{j2\pi Tt}$ is a periodic function of $t$, which contradicts that $x\brak{t}$ is aperiodic,
+
+Therefore, $X\brak{f}$ cannot be periodic, hence it must be aperiodic.
+
+\vspace{2mm}
+
+\textbf{2. Continuous, periodic signal}\\
+
+Let a periodic and continuous function be $x\brak{t}$
+\begin{align}
+x\brak{t}&=x\brak{t+kT}\\
+x\brak{t}& \leftrightarrow X\brak{f}\\
+X\brak{f}&=\int_{-\infty}^{\infty} x\brak{t}.e^{-j2\pi ft}\,dt\\
+X\brak{f}&=\int_{-\infty}^{\infty} x\brak{t+kT}.e^{-j2\pi ft}\,dt\\
+\text{Let } \tau &= t+kT\\
+X\brak{f}&=\int_{-\infty}^{\infty} x\brak{\tau}.e^{-j2\pi f\tau}.e^{j2\pi fkT}\,d\tau
+\end{align}
+
+$e^{j2\pi fkT} $ is a Periodic function in frequency domain with period $\frac{1}{T}$ Hz \\
+\begin{align}
+X\brak{f}&=e^{j2\pi fkT}\int_{-\infty}^{\infty} x\brak{\tau}.e^{-j2\pi f\tau}\,d\tau\\
+\implies &X\brak{f} \text{ is aperiodic}
+\end{align}
+
+
+$X\brak{f}$ will be  a sum of scaled copies of the Fourier transform of $x\brak{t}$, each copy shifted by multiples of $\frac{1}{T}$Hz This results in a discrete frequency domain representation.\\
+\vspace{2mm}
+\textbf{3. Discrete, aperiodic signal}\\
+
+
+For a discrete and periodic signal  $x\sbrak{n}$ with period N it's Discrete time Fourier transform is given as: 
+\begin{align}
+X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
+X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
+\end{align}
+
+Let's consider the Discrete time Fourier Transform (DFT) of $x\sbrak{n}$, denoted by $ X\sbrak{k}$ which is defined as:
+
+\begin{align}
+X\sbrak{k}&=\sum_{n=0}^{N-1}x\sbrak{n}e^{-j\frac{2\pi}{N}kn}
+\end{align}
+The DFT is inherently periodic in frequency domain with period $\frac{1}{N}$.\\
+
+
+As  $N$ approaches infinity, the spacing between frequency samples in the frequency domain  $\frac{1}{N}$  approaches zero. Therefore, the DFT $X\sbrak{k}$ approaches the continuous Fourier Transform $X\brak{f}$. \\
+
+Since the DFT $X\brak{f}$  is periodic in the frequency domain, its limiting form $X\brak{f}$ is also periodic, continuous in frequency domain.
+
+\vspace{2mm}
+\textbf{4. Discrete,periodic signal}
+
+For a discrete and periodic signal  $x\sbrak{n}$ with period N it's Discrete time Fourier transform is given as: 
+\begin{align}
+X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
+X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
+\end{align}
+
+The DFT is periodic in frequency domain with period $\frac{1}{N}$\\
+
+As $N$ is finite , Therefore DFT has finite period $\frac{1}{N}$
+
+\begin{align}
+X\sbrak{k}&=\sum_{n=0}^{N-1}x\sbrak{n}e^{-j\frac{2\pi}{N}kn}
+\end{align}
+The DFT computation involves summing over a finite number of samples . Therefore, the resulting spectrum  $X\sbrak{k}$is inherently discrete.
 
 \end{document}
