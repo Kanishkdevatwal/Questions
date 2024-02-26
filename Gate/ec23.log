@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  26 FEB 2024 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  26 FEB 2024 19:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1368,6 +1368,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+
+ []
+
 [3] (./ec23.aux)
 Package rerunfilecheck Info: File `ec23.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1389,7 +1394,7 @@ ve/2023/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/202
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on ec23.pdf (3 pages, 62307 bytes).
+Output written on ec23.pdf (3 pages, 62434 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
