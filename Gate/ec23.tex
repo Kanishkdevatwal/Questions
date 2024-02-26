@@ -92,8 +92,6 @@ In the table shown below, match the signal type with its spectral characteristic
 
 \textbf{1. Continuous, aperiodic signal}\\
 
-
-Let a aperiodic and continuous function be $x\brak{t}$
 \begin{align}
 X\brak{f}&=\int_{-\infty}^{\infty} x\brak{t}.e^{-j2\pi ft}\,dt
 \end{align}
@@ -136,7 +134,6 @@ Therefore, $X\brak{f}$ cannot be periodic, hence it must be aperiodic.
 
 \textbf{2. Continuous, periodic signal}\\
 
-Let a periodic and continuous function be $x\brak{t}$
 \begin{align}
 x\brak{t}&=x\brak{t+kT}\\
 x\brak{t}& \leftrightarrow X\brak{f}\\
@@ -155,10 +152,10 @@ X\brak{f}&=e^{j2\pi fkT}\int_{-\infty}^{\infty} x\brak{\tau}.e^{-j2\pi f\tau}\,d
 
 $X\brak{f}$ will be  a sum of scaled copies of the Fourier transform of $x\brak{t}$, each copy shifted by multiples of $\frac{1}{T}$Hz This results in a discrete frequency domain representation.\\
 \vspace{2mm}
+
+
 \textbf{3. Discrete, aperiodic signal}\\
 
-
-For a discrete and periodic signal  $x\sbrak{n}$ with period N it's Discrete time Fourier transform is given as: 
 \begin{align}
 X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
 X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
@@ -179,7 +176,6 @@ Since the DFT $X\brak{f}$  is periodic in the frequency domain, its limiting for
 \vspace{2mm}
 \textbf{4. Discrete,periodic signal}
 
-For a discrete and periodic signal  $x\sbrak{n}$ with period N it's Discrete time Fourier transform is given as: 
 \begin{align}
 X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
 X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
