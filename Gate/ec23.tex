@@ -128,9 +128,16 @@ x\brak{t}&=\int_{-\infty}^{\infty} X\brak{f}.e^{j2\pi ft}\,df\\
 
 $e^{j2\pi Tt}$ is a periodic function of $t$, which contradicts that $x\brak{t}$ is aperiodic,
 
-Therefore, $X\brak{f}$ cannot be periodic, hence it must be aperiodic.
-
+Therefore, $X\brak{f}$ cannot be periodic, hence it must be aperiodic.\\
 \vspace{2mm}
+
+For Example: Exponential Decay
+
+\begin{align}
+x\brak{t}&=e^{-\alpha t}\\
+X\brak{f}&= \int_{-\infty}^{\infty} e^{-\alpha t}.e^{-j2\pi ft}\,dt
+\end{align}
+
 
 \textbf{2. Continuous, periodic signal}\\
 
@@ -153,13 +160,19 @@ X\brak{f}&=e^{j2\pi fkT}\int_{-\infty}^{\infty} x\brak{\tau}.e^{-j2\pi f\tau}\,d
 $X\brak{f}$ will be  a sum of scaled copies of the Fourier transform of $x\brak{t}$, each copy shifted by multiples of $\frac{1}{T}$Hz This results in a discrete frequency domain representation.\\
 \vspace{2mm}
 
+For example: Square Wave Equation
+\begin{align}
+x\brak{t}&=sgn\brak{sin\brak{2\pi ft}}\\
+X\brak{f}&=\int_{-\infty}^{\infty} sgn\brak{sin\brak{2\pi ft}}.e^{-j2\pi ft}\, dt
+\end{align}
+
 
 \textbf{3. Discrete, aperiodic signal}\\
 
 \begin{align}
-X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
-X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
+X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}
 \end{align}
+
 
 Let's consider the Discrete time Fourier Transform (DFT) of $x\sbrak{n}$, denoted by $ X\sbrak{k}$ which is defined as:
 
@@ -171,24 +184,36 @@ The DFT is inherently periodic in frequency domain with period $\frac{1}{N}$.\\
 
 As  $N$ approaches infinity, the spacing between frequency samples in the frequency domain  $\frac{1}{N}$  approaches zero. Therefore, the DFT $X\sbrak{k}$ approaches the continuous Fourier Transform $X\brak{f}$. \\
 
-Since the DFT $X\brak{f}$  is periodic in the frequency domain, its limiting form $X\brak{f}$ is also periodic, continuous in frequency domain.
+Since the DFT $X\brak{f}$  is periodic in the frequency domain, its limiting form $X\brak{f}$ is also periodic, continuous in frequency domain.\\
 
+For example: Exponential Decay
+
+\begin{align}
+x\sbrak{t}&= e^{-2n}\\
+X\brak{f}&= \sum_{n=-\infty}^{\infty} e^{-2n}.e^{-j2\pi fn}
+\end{align}
 \vspace{2mm}
 \textbf{4. Discrete,periodic signal}
 
 \begin{align}
-X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}\\
-X\brak{e^{jw}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-jwn}
+X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}
 \end{align}
 
-The DFT is periodic in frequency domain with period $\frac{1}{N}$\\
+The Discrete Fourier Transform(DFT) is periodic in frequency domain with period $\frac{1}{N}$\\
 
 As $N$ is finite , Therefore DFT has finite period $\frac{1}{N}$
 
 \begin{align}
 X\sbrak{k}&=\sum_{n=0}^{N-1}x\sbrak{n}e^{-j\frac{2\pi}{N}kn}
 \end{align}
-The DFT computation involves summing over a finite number of samples . Therefore, the resulting spectrum  $X\sbrak{k}$is inherently discrete.\\
+The DFT computation involves summing over a finite number of samples . Therefore, the resulting spectrum  $X\sbrak{k}$ is inherently discrete.\\
+
+For example:  Sinusoidal Signal
+
+\begin{align}
+x\sbrak{n}&=2sin\brak{2\pi fn}\\
+X\brak{f}&= \sum_{n=-\infty}^{\infty} 2sin\brak{2\pi fn}.e^{-j2\pi fn}
+\end{align}
 
 \brak{\romannumeral 1} \textrightarrow \brak{a}   ,  \brak{\romannumeral 2} \textrightarrow \brak{c}   ,   \brak{\romannumeral 3} \textrightarrow \brak{b}   ,   \brak{\romannumeral 4} \textrightarrow \brak{d}
 

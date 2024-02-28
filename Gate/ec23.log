@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  26 FEB 2024 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  28 FEB 2024 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1339,52 +1339,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
 [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--192
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-[3] (./ec23.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
+
+ []
+
+[4] (./ec23.aux)
 Package rerunfilecheck Info: File `ec23.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30415 strings out of 476025
- 600998 string characters out of 5790018
+ 30422 strings out of 476025
+ 601082 string characters out of 5790018
  1870388 words of memory out of 5000000
  50163 multiletter control sequences out of 15000+600000
  582396 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,10n,96p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,10n,96p,1172b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texli
@@ -1394,10 +1399,10 @@ ve/2023/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/202
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on ec23.pdf (3 pages, 62349 bytes).
+Output written on ec23.pdf (4 pages, 63944 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
- 35 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 42 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
