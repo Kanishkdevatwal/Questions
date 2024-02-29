@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  28 FEB 2024 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.7)  29 FEB 2024 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1332,64 +1332,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-(./tables/table1.tex)
+(./tables/table1.tex) [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
+]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
-ocal/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
-[4] (./ec23.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 239--241
+
+ []
+
+[5] (./ec23.aux)
 Package rerunfilecheck Info: File `ec23.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30422 strings out of 476025
- 601082 string characters out of 5790018
- 1870388 words of memory out of 5000000
+ 30432 strings out of 476025
+ 601205 string characters out of 5790018
+ 1871388 words of memory out of 5000000
  50163 multiletter control sequences out of 15000+600000
  582396 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,10n,96p,1172b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,15n,96p,1172b,444s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texli
@@ -1399,10 +1440,10 @@ ve/2023/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/202
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on ec23.pdf (4 pages, 63944 bytes).
+Output written on ec23.pdf (5 pages, 68427 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 42 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -61,7 +61,7 @@ In the table shown below, match the signal type with its spectral characteristic
 
 \begin{table}[ht]
     \centering
-    \def\arraystretch{2.5}
+    \def\arraystretch{2}
     \input{tables/table.tex}
     \caption{ }
     \label{29.2023}
@@ -83,13 +83,13 @@ In the table shown below, match the signal type with its spectral characteristic
 
 \begin{table}[ht]
     \centering
-    \def\arraystretch{2.5}
+    \def\arraystretch{2}
     \input{tables/table1.tex}
     \caption{Input Parameters}
     \label{1}
 \end{table}
 
-
+\newpage
 \textbf{1. Continuous, aperiodic signal}\\
 
 \begin{align}
@@ -131,13 +131,19 @@ $e^{j2\pi Tt}$ is a periodic function of $t$, which contradicts that $x\brak{t}$
 Therefore, $X\brak{f}$ cannot be periodic, hence it must be aperiodic.\\
 \vspace{2mm}
 
-For Example: Exponential Decay
 
+For Example: Exponential Decay\\
+
+From \tabref{1}
 \begin{align}
-x\brak{t}&=e^{-\alpha t}\\
-X\brak{f}&= \int_{-\infty}^{\infty} e^{-\alpha t}.e^{-j2\pi ft}\,dt
+x\brak{t}&=e^{-2 t}.u\brak{t}\\
+X\brak{f}&= \int_{-\infty}^{\infty} e^{-2ft}u\brak{t}.e^{-j2\pi ft}\,dt\\
+&= \int_{0}^{\infty} e^{-\brak{2+j2\pi f}t}\,dt\\
+&= \frac{1}{2\brak{1 + j\pi f}}
 \end{align}
 
+$\implies X\brak{f} $ is continuous and aperiodic \\
+ 
 
 \textbf{2. Continuous, periodic signal}\\
 
@@ -160,17 +166,23 @@ X\brak{f}&=e^{j2\pi fkT}\int_{-\infty}^{\infty} x\brak{\tau}.e^{-j2\pi f\tau}\,d
 $X\brak{f}$ will be  a sum of scaled copies of the Fourier transform of $x\brak{t}$, each copy shifted by multiples of $\frac{1}{T}$Hz This results in a discrete frequency domain representation.\\
 \vspace{2mm}
 
-For example: Square Wave Equation
+For example: Sine wave function\\
+
+From \tabref{1}
 \begin{align}
-x\brak{t}&=sgn\brak{sin\brak{2\pi ft}}\\
-X\brak{f}&=\int_{-\infty}^{\infty} sgn\brak{sin\brak{2\pi ft}}.e^{-j2\pi ft}\, dt
+x\brak{t}&=sin\brak{2\pi ft}\\
+sin\brak{f_0t}&= \frac{1}{2j}\sbrak{e^{j2\pi f_0 t} -  e^{-j2\pi f_0 t} }\\
+X\brak{f} &=  \frac{1}{2j}  \sbrak{2\pi \delta\brak{2\pi f- 2\pi f_0} - 2\pi \delta\brak{2\pi f+2\pi f_0}  }\\
+&= j\pi \sbrak{\delta\brak{2\pi f + 2\pi f_0} -   \delta\brak{2\pi f - 2\pi f_0}}
 \end{align}
+
+$\implies X\brak{f}$ is Discrete and Aperiodic Signal\\
 
 
 \textbf{3. Discrete, aperiodic signal}\\
 
 \begin{align}
-X\brak{f}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}
+X\brak{e^{j2\pi f}}&= \sum_{n=-\infty}^{\infty} x\sbrak{n}.e^{-j2\pi fn}
 \end{align}
 
 
@@ -186,12 +198,18 @@ As  $N$ approaches infinity, the spacing between frequency samples in the freque
 
 Since the DFT $X\brak{f}$  is periodic in the frequency domain, its limiting form $X\brak{f}$ is also periodic, continuous in frequency domain.\\
 
-For example: Exponential Decay
+For example: Exponential Decay\\
+
+From \tabref{1}
 
 \begin{align}
-x\sbrak{t}&= e^{-2n}\\
-X\brak{f}&= \sum_{n=-\infty}^{\infty} e^{-2n}.e^{-j2\pi fn}
+x\sbrak{n}&= e^{n}.u\sbrak{n}\\
+X\brak{e^{j2\pi f}}&= \sum_{n=-\infty}^{\infty} e^{n}.u\sbrak{n}.e^{-j2\pi fn}\\
+&=  \sum_{n=0}^{\infty} e^{\brak{1-j2\pi f}^{n}}\\
+&=\frac{1}{1-e^{\brak{1-j2\pi f}}}
 \end{align}
+$\implies $ Continuous and Periodic signal\\
+
 \vspace{2mm}
 \textbf{4. Discrete,periodic signal}
 
@@ -208,12 +226,18 @@ X\sbrak{k}&=\sum_{n=0}^{N-1}x\sbrak{n}e^{-j\frac{2\pi}{N}kn}
 \end{align}
 The DFT computation involves summing over a finite number of samples . Therefore, the resulting spectrum  $X\sbrak{k}$ is inherently discrete.\\
 
-For example:  Sinusoidal Signal
+For example:  Sinusoidal Signal\\
+
+From \tabref{1}
 
 \begin{align}
-x\sbrak{n}&=2sin\brak{2\pi fn}\\
-X\brak{f}&= \sum_{n=-\infty}^{\infty} 2sin\brak{2\pi fn}.e^{-j2\pi fn}
+x\sbrak{n}&=sin\brak{2\pi f_0n}.u\sbrak{n}\\
+X\brak{e^{j2\pi f}}&= \sum_{n=-\infty}^{\infty} sin\brak{2\pi f_0n}.u\sbrak{n}.e^{-j2\pi fn}\\
+&= \sum_{n=0}^{\infty} \frac{e^{j2\pi f_0n}- e^{-j2\pi f_0n}}{2j}. e^{-j2\pi fn}\\
+&=\frac{1}{2j}\sum_{n=0}^{\infty} \brak{e^{j\brak{2\pi f_0n-2\pi fn}} -  e^{-j\brak{2\pi f_0n+2\pi fn}} }\\
+&= \frac{1}{2j} \brak{\frac{1}{1-e^{j\brak{2\pi f_0-2\pi f}}}  -  \frac{1}{1-e^{-j\brak{2\pi f_0+ 2\pi f}}}}
 \end{align}
+Discrete and Periodic \\
 
 \brak{\romannumeral 1} \textrightarrow \brak{a}   ,  \brak{\romannumeral 2} \textrightarrow \brak{c}   ,   \brak{\romannumeral 3} \textrightarrow \brak{b}   ,   \brak{\romannumeral 4} \textrightarrow \brak{d}
 
